@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "tag": [
+    {
+      "group": "空日志",
+      "tag_config": [
+        {
+          "key": ""
+        }
+      ]
+    },
+    {
+      "group": "系统",
+      "tag_config": [
+        {
+          "key": "all"
+        }
+      ]
+    },
+    {
+      "group": "日志系统",
+      "tag_config": [
+        {
+          "key": "log"
+        }
+      ]
+    },
+    {
+      "group": "上报系统",
+      "tag_config": [
+        {
+          "key": "report"
+        }
+      ]
+    },
+    {
+      "group": "推送日志",
+      "tag_config": [
+        {
+          "key": "push"
+        }
+      ]
+    },
+    {
+      "group": "上报log",
+      "tag_config": [
+        {
+          "key": "fellow"
+        }
+      ]
+    },
+    {
+      "group": "hybridApp_log",
+      "tag_config": [
+        {
+          "key": "hybrid"
+        }
+      ]
+    },
+    {
+      "group": "下载上报log",
+      "tag_config": [
+        {
+          "key": "download"
+        }
+      ]
+    },
+    {
+      "group": "辅助功能日志",
+      "tag_config": [
+        {
+          "key": "accessibility"
+        }
+      ]
+    },
+    {
+      "group": "群主设置功能日志",
+      "tag_config": [
+        {
+          "key": "chatsetting"
+        }
+      ]
+    },
+    {
+      "group": "推荐有礼",
+      "tag_config": [
+        {
+          "key": "referral"
+        }
+      ]
+    },
+    {
+      "group": "搜索",
+      "tag_config": [
+        {
+          "key": "search"
+        }
+      ]
+    },
+    {
+      "group": "签到",
+      "tag_config": [
+        {
+          "key": "checkin"
+        }
+      ]
+    },
+    {
+      "group": "语音",
+      "tag_config": [
+        {
+          "key": "voice"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "permission": [
+    {
+      "phone_name": "小米",
+      "phone_os_version": "MI",
+      "rom_config": [
+        {
+          "key": "ro.product.brand",
+          "value": "Xiaomi",
+          "contain_value": ""
+        },
+        {
+          "key": "ro.miui.ui.version.name",
+          "value": "",
+          "contain_value": "V"
+        }
+      ]
+    },
+    {
+      "phone_name": "Vivo",
+      "phone_os_version": "vivo X20A",
+      "rom_config": [
+        {
+          "key": "ro.product.brand",
+          "value": "vivo",
+          "contain_value": ""
+        },
+        {
+          "key": "ro.product.model",
+          "value": "vivo X20A",
+          "contain_value": ""
+        }
+      ]
+    },
+    {
+      "phone_name": "Vivo",
+      "phone_os_version": "funtouch 3",
+      "rom_config": [
+        {
+          "key": "ro.product.brand",
+          "value": "vivo",
+          "contain_value": ""
+        },
+        {
+          "key": "ro.vivo.os.build.display.id",
+          "value": "",
+          "contain_value": "Funtouch OS_3"
+        }
+      ]
+    },
+    {
+      "phone_name": "华为",
+      "phone_os_version": "emui_2.3",
+      "rom_config": [
+        {
+          "key": "ro.build.version.emui",
+          "value": "EmotionUI_2.3",
+          "contain_value": ""
+        }
+      ]
+    },
+    {
+      "phone_name": "华为",
+      "phone_os_version": "emui_3",
+      "rom_config": [
+        {
+          "key": "ro.build.version.emui",
+          "value": "",
+          "contain_value": "EmotionUI_3.0"
+        }
+      ]
+    },
+    {
+      "phone_name": "华为",
+      "phone_os_version": "emui_3",
+      "rom_config": [
+        {
+          "key": "ro.build.version.emui",
+          "value": "",
+          "contain_value": "EmotionUI_3.1"
+        }
+      ]
+    },
+    {
+      "phone_name": "华为",
+      "phone_os_version": "emui_4",
+      "rom_config": [
+        {
+          "key": "ro.build.version.emui",
+          "value": "",
+          "contain_value": "EmotionUI_4.0"
+        }
+      ]
+    },
+    {
+      "phone_name": "华为",
+      "phone_os_version": "emui_4",
+      "rom_config": [
+        {
+          "key": "ro.build.version.emui",
+          "value": "",
+          "contain_value": "EmotionUI_4.1"
+        }
+      ]
+    },
+    {
+      "phone_name": "华为",
+      "phone_os_version": "emui_5",
+      "rom_config": [
+        {
+          "key": "ro.build.version.emui",
+          "value": "",
+          "contain_value": "EmotionUI_5"
+        }
+      ]
+    },
+    {
+      "phone_name": "魅族",
+      "phone_os_version": "MX5",
+      "rom_config": [
+        {
+          "key": "ro.product.brand",
+          "value": "",
+          "contain_value": "Meizu"
+        },
+        {
+          "key": "ro.product.board",
+          "value": "mx5",
+          "contain_value": ""
+        }
+      ]
+    },
+    {
+      "phone_name": "魅族",
+      "phone_os_version": "MX6",
+      "rom_config": [
+        {
+          "key": "ro.product.brand",
+          "value": "",
+          "contain_value": "Meizu"
+        },
+        {
+          "key": "ro.product.board",
+          "value": "mx6",
+          "contain_value": ""
+        }
+      ]
+    },
+    {
+      "phone_name": "魅族",
+      "phone_os_version": "M3s",
+      "rom_config": [
+        {
+          "key": "ro.product.brand",
+          "value": "",
+          "contain_value": "Meizu"
+        },
+        {
+          "key": "ro.product.board",
+          "value": "M3s",
+          "contain_value": ""
+        }
+      ]
+    },
+    {
+      "phone_name": "魅族",
+      "phone_os_version": "MX3",
+      "rom_config": [
+        {
+          "key": "ro.product.brand",
+          "value": "",
+          "contain_value": "Meizu"
+        },
+        {
+          "key": "ro.product.board",
+          "value": "mx3",
+          "contain_value": ""
+        }
+      ]
+    },
+    {
+      "phone_name": "OPPO",
+      "phone_os_version": "oppo",
+      "rom_config": [
+        {
+          "key": "ro.product.brand",
+          "value": "OPPO",
+          "contain_value": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "version": 1,
+  "permission": [
+    {
+      "id": "1",
+      "rom_config": [
+        {
+          "version_config": [
+            {
+              "key": "ro.build.version.emui",
+              "value": "EmotionUI_2.3"
+            }
+          ],
+          "phone_name": "华为"
+        }
+      ],
+      "startup_intent": {
+        "package_name": "com.huawei.systemmanager",
+        "activity_name": "com.huawei.systemmanager.optimize.bootstart.BootStartActivity"
+      }
+    },
+    {
+      "id": "2",
+      "rom_config": [
+        {
+          "version_config": [
+            {
+              "key": "ro.build.version.emui",
+              "contain_value": "EmotionUI_3.0"
+            }
+          ],
+          "phone_name": "华为"
+        }
+      ],
+      "startup_intent": {
+        "package_name": "com.huawei.systemmanager",
+        "activity_name": "com.huawei.systemmanager.optimize.bootstart.BootStartActivity"
+      },
+      "notification_intent": {
+        "cover_gravity": "buttom",
+        "package_name": "com.huawei.systemmanager",
+        "activity_name": "com.huawei.notificationmanager.ui.NotificationManagmentActivity"
+      }
+    },
+    {
+      "id": "3",
+      "rom_config": [
+        {
+          "version_config": [
+            {
+              "key": "ro.build.version.emui",
+              "contain_value": "EmotionUI_3.1"
+            }
+          ],
+          "phone_name": "华为"
+        },
+        {
+          "version_config": [
+            {
+              "key": "ro.build.version.emui",
+              "contain_value": "EmotionUI_4.0"
+            }
+          ],
+          "phone_name": "华为"
+        },
+        {
+          "version_config": [
+            {
+              "key": "ro.build.version.emui",
+              "contain_value": "EmotionUI_4.1"
+            }
+          ],
+          "phone_name": "华为"
+        }
+      ],
+      "startup_intent": {
+        "package_name": "com.huawei.systemmanager",
+        "activity_name": "com.huawei.systemmanager.startupmgr.ui.StartupNormalAppListActivity"
+      },
+      "notification_intent": {
+        "cover_gravity": "buttom",
+        "package_name": "com.huawei.systemmanager",
+        "activity_name": "com.huawei.notificationmanager.ui.NotificationManagmentActivity"
+      },
+      "calendar_intent": {
+        "cover_gravity": "top",
+        "cover_imageview": "green",
+        "cover_text": "向下滚动，找到日程，找到云之家\n开启日程权限",
+        "package_name": "com.huawei.systemmanager",
+        "activity_name": "com.huawei.permissionmanager.ui.MainActivity"
+      }
+    },
+    {
+      "id": "4",
+      "rom_config": [
+        {
+          "version_config": [
+            {
+              "key": "ro.build.product",
+              "value": "OnePlus2"
+            },
+            {
+              "key": "ro.rom.version",
+              "value": "H2OS V1.2.0"
+            }
+          ],
+          "phone_name": "一加"
+        }
+      ],
+      "startup_intent": {
+        "package_name": "com.oneplus.security",
+        "activity_name": "com.oneplus.security.autorun.AutorunMainActivity"
+      }
+    },
+    {
+      "id": "5",
+      "rom_config": [
+        {
+          "version_config": [
+            {
+              "key": "ro.rom.different.version",
+              "contain_value": "ColorOS3.0"
+            },
+            {
+              "key": "ro.product.brand",
+              "value": "OPPO"
+            },
+            {
+              "key": "ro.product.name",
+              "value": "R9m"
+            }
+          ],
+          "phone_name": "OPPO R9"
+        }
+      ],
+      "startup_intent": {
+        "cover_gravity": "top",
+        "cover_imageview": "green",
+        "cover_text": "向下滚动，找到云之家\n开启自启动管理权限",
+        "package_name": "com.coloros.safecenter",
+        "activity_name": "com.coloros.safecenter.startupapp.StartupAppListActivity"
+      },
+      "notification_intent": {
+        "cover_gravity": "top",
+        "cover_imageview": "green",
+        "cover_text": "向下滚动，找到云之家\n开启允许通知权限",
+        "package_name": "com.coloros.notificationmanager",
+        "activity_name": "com.coloros.notificationmanager.NotificationCenterActivity"
+      },
+      "toastwindow_intent": {
+        "package_name": "com.coloros.safecenter",
+        "activity_name": "com.coloros.safecenter.sysfloatwindow.FloatWindowListActivity"
+      },
+      "calendar_intent": {
+        "cover_gravity": "top",
+        "cover_imageview": "green",
+        "cover_text": "向下滚动，找到日程，找到云之家\n开启日程权限",
+        "package_name": "com.coloros.safecenter",
+        "activity_name": "com.coloros.safecenter.permission.singlepage.PermissionSinglePageActivity"
+      }
+    },
+    {
+      "id": "6",
+      "rom_config": [
+        {
+          "version_config": [
+            {
+              "key": "ro.build.version.opporom",
+              "value": "V3.0.0"
+            }
+          ],
+          "phone_name": "oppo"
+        }
+      ],
+      "startup_intent": {
+        "package_name": "com.coloros.safecenter",
+        "activity_name": "com.coloros.safecenter.permission.startup.StartupAppListActivity"
+      },
+      "notification_intent": {
+        "cover_gravity": "buttom",
+        "package_name": "com.coloros.notificationmanager",
+        "activity_name": "com.coloros.notificationmanager.NotificationCenterActivity"
+      },
+      "calendar_intent": {
+        "cover_gravity": "top",
+        "cover_imageview": "green",
+        "cover_text": "向下滚动，找到日程，找到云之家\n开启日程权限",
+        "package_name": "com.coloros.safecenter",
+        "activity_name": "com.coloros.safecenter.permission.singlepage.PermissionSinglePageActivity"
+      }
+    },
+    {
+      "id": "7",
+      "rom_config": [
+        {
+          "version_config": [
+            {
+              "key": "ro.vivo.os.name",
+              "value": "Funtouch"
+            },
+            {
+              "key": "ro.vivo.os.version",
+              "value": "3.0"
+            }
+          ],
+          "phone_name": "Vivo"
+        }
+      ],
+      "notification_intent": {
+        "cover_gravity": "top",
+        "cover_imageview": "blue",
+        "cover_text": "向下滚动，找到云之家\n开启允许通知权限",
+        "package_name": "com.android.systemui",
+        "activity_name": "com.android.systemui.vivo.common.notification.settings.StatusbarSettingActivity"
+      },
+      "calendar_intent": {
+        "cover_gravity": "top",
+        "cover_imageview": "green",
+        "cover_text": "向下滚动，找到日程，找到云之家\n开启日程权限",
+        "package_name": "com.iqoo.secure",
+        "activity_name": "com.iqoo.secure.safeguard.PurviewTabActivity"
+      }
+    },
+    {
+      "id": "8",
+      "rom_config": [
+        {
+          "version_config": [
+            {
+              "key": "ro.build.version.emui",
+              "value": "EmotionUI_5.0"
+            }
+          ],
+          "phone_name": "华为"
+        }
+      ],
+      "startup_intent": {
+        "package_name": "com.huawei.systemmanager",
+        "activity_name": "com.huawei.systemmanager.startupmgr.ui.StartupNormalAppListActivity"
+      },
+      "notification_intent": {
+        "package_name": "com.huawei.systemmanager",
+        "activity_name": "com.huawei.notificationmanager.ui.NotificationManagmentActivity"
+      },
+      "screenlock_intent": {
+        "package_name": "com.huawei.systemmanager",
+        "activity_name": "com.huawei.systemmanager.optimize.process.ProtectActivity"
+      }
+    },
+    {
+      "id": "9",
+      "rom_config": [
+        {
+          "version_config": [
+            {
+              "key": "ro.build.version.incremental",
+              "contain_value": "V8.5"
+            }
+          ],
+          "phone_name": "小米"
+        }
+      ],
+      "calendar_intent": {
+        "cover_gravity": "top",
+        "cover_imageview": "green",
+        "cover_text": "点应用权限管理，找到云之家\n开启日程权限",
+        "package_name": "com.miui.securitycenter",
+        "activity_name": "com.miui.permcenter.MainAcitivty"
+      }
+    },
+    {
+      "id": "10",
+      "rom_config": [
+        {
+          "version_config": [
+            {
+              "key": "ro.build.version.emui",
+              "value": "EmotionUI_5.1"
+            }
+          ],
+          "phone_name": "华为"
+        }
+      ],
+      "startup_intent": {
+        "cover_gravity": "bottom",
+        "cover_imageview": "blue",
+        "cover_text": "下滑找到云之家，点击设置单项权限\n开启信任此应用和应用自动启动",
+        "package_name": "com.huawei.systemmanager",
+        "activity_name": "com.huawei.permissionmanager.ui.MainActivity"
+      },
+      "notification_intent": {
+        "cover_text": "下滑找到云之家\n点击允许通知",
+        "package_name": "com.huawei.systemmanager",
+        "activity_name": "com.huawei.notificationmanager.ui.NotificationManagmentActivity"
+      },
+      "screenlock_intent": {
+        "package_name": "com.huawei.systemmanager",
+        "activity_name": "com.huawei.systemmanager.optimize.process.ProtectActivity"
+      }
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "app": [
+    {
+      "appName": "照片",
+      "appUrl": "cloudhub://photoapp",
+      "appType": 1,
+      "iconUrl": "inbox_btn_picture_normal",
+      "groupType": 3,
+      "groupRange": 3
+    },
+    {
+      "appName": "拍照",
+      "appUrl": "cloudhub://takephotoapp",
+      "appType": 1,
+      "iconUrl": "inbox_btn_camera_normal",
+      "groupType": 3,
+      "groupRange": 3
+    },
+    {
+      "appName": "小视频",
+      "appUrl": "cloudhub://videoapp",
+      "appType": 1,
+      "iconUrl": "selector_inbox_btn_video",
+      "groupType": 3,
+      "groupRange": 3
+    },
+    {
+      "appName": "红包",
+      "appUrl": "cloudhub://lightapp?appid=10137",
+      "appType": 2,
+      "iconUrl": "inbox_btn_lucky_normal",
+      "groupType": 3,
+      "groupRange": 3
+    },
+    {
+      "appName": "无痕消息",
+      "appUrl": "cloudhub://tracelessapp",
+      "appType": 1,
+      "iconUrl": "inbox_btn_traceless_normal",
+      "groupType": 1,
+      "groupRange": 1
+    },
+    {
+      "appName": "无痕消息",
+      "appUrl": "cloudhub://tracelessapp",
+      "appType": 1,
+      "iconUrl": "inbox_btn_traceless_normal",
+      "groupType": 1,
+      "groupRange": 2
+    },
+    {
+      "appName": "企业云盘",
+      "appUrl": "cloudhub://myfileapp",
+      "appType": 1,
+      "iconUrl": "inbox_btn_document_yunpan",
+      "groupType": 3,
+      "groupRange": 3
+    },
+    {
+      "appName": "提及",
+      "appUrl": "cloudhub://atapp",
+      "appType": 1,
+      "iconUrl": "inbox_btn_mention_normal",
+      "groupType": 2,
+      "groupRange": 1
+    },
+    {
+      "appName": "位置",
+      "appUrl": "cloudhub://locationapp",
+      "appType": 1,
+      "iconUrl": "inbox_btn_sign_normal",
+      "groupType": 3,
+      "groupRange": 3
+    },
+    {
+      "appName": "工作汇报",
+      "appUrl": "cloudhub://lightapp?appid=101091429&urlparam=type%3Dgroup",
+      "appType": 2,
+      "iconUrl": "inbox_btn_report_normal",
+      "groupType": 3,
+      "groupRange": 3
+    },
+    {
+      "appName": "语音会议",
+      "appUrl": "cloudhub://voicemeetingapp",
+      "appType": 1,
+      "iconUrl": "selector_inbox_btn_voice_meetting",
+      "groupType": 3,
+      "groupRange": 3
+    },
+    {
+      "appName": "投票",
+      "appUrl": "cloudhub://lightapp?appid=101091419",
+      "appType": 2,
+      "iconUrl": "inbox_btn_vote_normal",
+      "groupType": 2,
+      "groupRange": 1
+    },
+    {
+      "appName": "投票",
+      "appUrl": "cloudhub://lightapp?appid=101091419",
+      "appType": 2,
+      "iconUrl": "inbox_btn_vote_normal",
+      "groupType": 2,
+      "groupRange": 2
+    },
+    {
+      "appName": "审批",
+      "appUrl": "cloudhub://lightapp?appid=10104&urlparam=type%3Dgroup",
+      "appType": 2,
+      "iconUrl": "inbox_btn_approval_normal",
+      "groupType": 1,
+      "groupRange": 1
+    },
+    {
+      "appName": "审批",
+      "appUrl": "cloudhub://lightapp?appid=10104",
+      "appType": 2,
+      "iconUrl": "inbox_btn_approval_normal",
+      "groupType": 2,
+      "groupRange": 1
+    },
+    {
+      "appName": "短信通知",
+      "appUrl": "cloudhub://smsnotifyapp",
+      "appType": 1,
+      "iconUrl": "inbox_btn_sms_normal",
+      "groupType": 2,
+      "groupRange": 1
+    }
+  ]
+}

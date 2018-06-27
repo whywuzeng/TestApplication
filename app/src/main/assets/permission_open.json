@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "content": [
+    {
+      "rom_config": [
+        {
+          "version_config": [
+            {
+              "key": "ro.build.version.emui",
+              "value": "EmotionUI_4.0"
+            }
+          ],
+          "phone_name": "华为"
+        }
+      ],
+      "permission": [
+        {
+          "id": "1",
+          "intent": {
+            "package_name": "com.huawei.systemmanager",
+            "activity_name": "com.huawei.systemmanager.startupmgr.ui.StartupNormalAppListActivity"
+          },
+          "step": [
+            {
+              "find_node": [
+                {
+                  "find_text": "云之家",
+                  "scroll_node": "android.widget.ListView",
+                  "click_type": "switch",
+                  "finish_flag": "1"
+                }
+              ]
+            },
+            {
+              "find_node": [
+                {
+                  "find_text": "确定",
+                  "click_type": "self"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "intent": {
+            "package_name": "com.huawei.systemmanager",
+            "activity_name": "com.huawei.permissionmanager.ui.MainActivity"
+          },
+          "step": [
+            {
+              "find_node": [
+                {
+                  "find_text": "应用",
+                  "scroll_node": "android.widget.ListView",
+                  "click_type": "self"
+                }
+              ]
+            },
+            {
+              "find_node": [
+                {
+                  "find_text": "云之家",
+                  "scroll_node": "android.widget.ListView",
+                  "click_type": "parent"
+                }
+              ]
+            },
+            {
+              "find_node": [
+                {
+                  "find_text": "信任此应用",
+                  "click_type": "switch"
+                },
+                {
+                  "find_text": "应用自动启动",
+                  "click_type": "switch"
+                },
+                {
+                  "find_text": "悬浮窗",
+                  "click_type": "switch"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rom_config": [
+        {
+          "version_config": [
+            {
+              "key": "ro.build.version.emui",
+              "value": "EmotionUI_3"
+            }
+          ],
+          "phone_name": "华为"
+        }
+      ],
+      "permission": [
+        {
+          "id": "1",
+          "intent": {
+            "package_name": "com.huawei.systemmanager",
+            "activity_name": "com.huawei.systemmanager.optimize.process.ProtectActivity"
+          },
+          "step": [
+            {
+              "find_node": [
+                {
+                  "find_text": "云之家",
+                  "scroll_node": "android.widget.ListView",
+                  "click_type": "switch"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "intent": {
+            "package_name": "com.huawei.systemmanager",
+            "activity_name": "com.huawei.permissionmanager.ui.MainActivity"
+          },
+          "step": [
+            {
+              "find_node": [
+                {
+                  "find_text": "应用程序",
+                  "scroll_node": "android.widget.ListView",
+                  "click_type": "self"
+                }
+              ]
+            },
+            {
+              "find_node": [
+                {
+                  "find_text": "云之家",
+                  "scroll_node": "android.widget.ListView",
+                  "click_type": "parent"
+                }
+              ]
+            },
+            {
+              "find_node": [
+                {
+                  "find_text": "信任此应用程序",
+                  "click_type": "switch"
+                },
+                {
+                  "find_text": "开机自动启动",
+                  "click_type": "switch"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

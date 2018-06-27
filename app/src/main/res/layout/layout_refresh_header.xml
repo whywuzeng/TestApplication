@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="bottom|center"
+                android:layout_width="fill_parent"
+                android:layout_height="30.0dip"
+                android:background="@color/line_gray"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lt_pulldown_arrow"
+        android:background="@null"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_marginBottom="5.0dip"
+        app:lottie_fileName="top_data.json"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:lottie_progress="0.0"/>
+
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="#ffa0b0b9"
+        android:id="@+id/tv_pulldown_arrow"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:text="@string/v9loading_text1"
+        android:layout_toRightOf="@+id/lt_pulldown_arrow"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lt_pulldown_refresh"
+        android:background="@null"
+        android:layout_width="17.0dip"
+        android:layout_height="15.0dip"
+        android:visibility="gone"
+        android:layout_marginBottom="5.0dip"
+        app:lottie_fileName="top_data.json"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"/>
+
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="#ffa0b0b9"
+        android:id="@+id/tv_pulldown_refresh"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:text="@string/v9loading_text2"
+        android:layout_toRightOf="@+id/lt_pulldown_refresh"/>
+
+    <ImageView
+        android:id="@+id/iv_refresh_success"
+        android:visibility="gone"
+        android:layout_width="17.0dip"
+        android:layout_height="15.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:src="@drawable/loading_top_success"/>
+
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="#ffa0b0b9"
+        android:id="@+id/tv_refresh_success"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:text="@string/v9loading_text4"
+        android:layout_toRightOf="@id/iv_refresh_success"/>
+</RelativeLayout>

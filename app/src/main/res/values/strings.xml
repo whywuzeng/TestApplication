@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MyApplication</string>
+    <string name="v9loading_text4">刷新成功</string>
+    <string name="v9loading_text2">释放刷新</string>
+    <string name="v9loading_text1">下拉刷新</string>
+    <string name="description_define_in_xml">看到这么多炫酷的Header，是不是觉得很棒？这时你或许会担心这么多的Header集成在一起，但是平时只会用到一个，是不是要引入很多无用的代码和资源？ 请放心，我已经把刷新布局分成三个包啦，用到的时候自行引用就可以啦！
+
+SmartRefreshLayout 刷新布局核心实现，自带ClassicsHeader（经典）、BezierRadarHeader（贝塞尔雷达）两个 Header.
+SmartRefreshHeader 各种Header的集成，除了Layout自带的Header，其它都在这个包中.
+SmartRefreshFooter 各种Footer的集成，除了Layout自带的Footer，其它都在这个包中.</string>
+    <string name="accessibility_description">accessibility_service description</string>
+</resources>
