@@ -13,6 +13,7 @@
 
     <application
         android:allowBackup="true"
+        android:name="com.example.wz1.myapplication.PPApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -49,9 +50,20 @@
 
         </activity>
 
+        <!--测试状态栏沉浸式-->
         <activity android:name="com.example.wz1.myapplication.Test3Activity">
         </activity>
+
+        <!--测试布局图片沉浸式-->
         <activity android:name=".Test4Activity">
+        </activity>
+        <!--测试Fragment重叠问题,子Frgment重叠问题,和Fragment 进场动画的添加 getActivity为NULL的处理方法-->
+        <!--内存重启导致父Activity丢失-->
+        <activity android:name=".FragmentTestActivity"/>
+        <activity android:name=".fragmentTest.TwoActivity"/>
+
+        <!--测试webview使用-->
+        <activity android:name=".webview.WebViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 /**
  * Created by Administrator on 2019-01-15.
  * <p>
@@ -12,10 +15,14 @@ import android.support.v7.app.AppCompatActivity;
  * com.example.wz1.myapplication.systembar
  */
 public abstract class BaseActivity extends AppCompatActivity{
+
+    private Unbinder unbinder;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(parentContentView());
+        unbinder = ButterKnife.bind(this);
         //当FitsSystemWindows设置 true 时，会在屏幕最上方预留出状态栏高度的 padding
         StatusBarUtil.setRootViewFitsSystemWindows(this,true);
         //设置状态栏透明
@@ -30,4 +37,13 @@ public abstract class BaseActivity extends AppCompatActivity{
     }
 
     protected abstract int parentContentView();
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (unbinder!=null)
+        {
+            unbinder.unbind();
+        }
+    }
 }

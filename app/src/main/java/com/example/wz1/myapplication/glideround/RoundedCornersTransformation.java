@@ -21,6 +21,7 @@ package com.example.wz1.myapplication.glideround;
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ * 这个是从 github GlideTransformation复制过来的。图片圆角的处理
  */
 
 import android.graphics.Bitmap;
