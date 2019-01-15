@@ -18,11 +18,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
 
         </activity>
         <activity android:name="com.example.wz1.myapplication.TestActivity">
@@ -35,10 +30,6 @@
                   >
         </activity>
 
-        <activity android:name="com.example.wz1.myapplication.Test3Activity"
-                  >
-
-        </activity>
 
         <activity android:name="com.example.wz1.myapplication.RemoteViews.AppWidgetActivity"
                   >
@@ -48,6 +39,25 @@
                   >
         </activity>
         <activity android:name=".BookBinderTest.BookActivity"/>
+
+        <activity android:name=".okhttp.OkMainActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+
+        </activity>
+
+        <activity android:name="com.example.wz1.myapplication.Test3Activity">
+        </activity>
+        <activity android:name=".Test4Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
 
         <service android:name="com.example.wz1.myapplication.BookBinderTest.BookService11"/>
 

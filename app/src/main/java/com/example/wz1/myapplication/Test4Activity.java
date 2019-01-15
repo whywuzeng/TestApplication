@@ -3,6 +3,7 @@ package com.example.wz1.myapplication;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -12,6 +13,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.wz1.myapplication.glideround.GlideRoundTransform;
 import com.example.wz1.myapplication.glideround.RoundedCornersTransformation;
 import com.example.wz1.myapplication.systembar.BaseActivity;
+import com.example.wz1.myapplication.systembar.StatusBarUtil;
 
 /**
  * Created by Administrator on 2018-05-30.
@@ -21,10 +23,14 @@ import com.example.wz1.myapplication.systembar.BaseActivity;
  * com.example.wz1.myapplication
  */
 
-public class Test3Activity extends BaseActivity {
+public class Test4Activity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        StatusBarUtil.setRootViewFitsSystemWindows(this,false);
+        ActionBar supportActionBar = getSupportActionBar();
+        if (supportActionBar!=null)
+        supportActionBar.hide();
 
         ImageView icon1 = (ImageView) findViewById(R.id.icon1);
         ImageView icon2 = (ImageView) findViewById(R.id.icon2);
@@ -43,6 +49,6 @@ public class Test3Activity extends BaseActivity {
 
     @Override
     protected int parentContentView() {
-        return R.layout.activity_test4;
+        return R.layout.activity_test5;
     }
 }
