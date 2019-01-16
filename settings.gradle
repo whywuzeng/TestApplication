@@ -1,1 +1,1 @@
-include ':app', ':lib', ':process'
+include ':app', ':lib', ':process', ':jnitest'
