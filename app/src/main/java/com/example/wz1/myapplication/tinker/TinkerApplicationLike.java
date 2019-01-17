@@ -6,15 +6,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.support.multidex.MultiDex;
+import android.widget.Toast;
 
 import com.example.wz1.myapplication.BlockDetectByPrinter.BlockDetectByPrinter;
-import com.example.wz1.myapplication.tinker.Log.MyLogImp;
-import com.example.wz1.myapplication.tinker.utils.TinkerManager;
-import com.tencent.tinker.anno.DefaultLifeCycle;
+import com.tencent.bugly.Bugly;
+import com.tencent.bugly.beta.Beta;
+import com.tencent.bugly.beta.interfaces.BetaPatchListener;
 import com.tencent.tinker.lib.tinker.Tinker;
-import com.tencent.tinker.lib.tinker.TinkerInstaller;
 import com.tencent.tinker.loader.app.DefaultApplicationLike;
-import com.tencent.tinker.loader.shareutil.ShareConstants;
+
+import java.util.Locale;
 
 /**
  * Created by Administrator on 2019-01-16.
@@ -23,14 +24,10 @@ import com.tencent.tinker.loader.shareutil.ShareConstants;
  * <p>
  * com.example.wz1.myapplication.tinker
  */
-@DefaultLifeCycle(application = "com.example.wz1.myapplication.PPApplication",
-                  flags = ShareConstants.TINKER_ENABLE_ALL,
-        loaderClass = "com.tencent.tinker.loader.TinkerLoader",//loaderClassName, 我们这里使用默认即可!（可不写）
-        loadVerifyFlag = false //tinkerLoadVerifyFlag
-)
 public class TinkerApplicationLike extends DefaultApplicationLike{
 
-    private Application mApplication;
+    public static final String TAG = "Tinker.SampleApplicationLike";
+
     private Application mContext;
     private Tinker mTinker;
 
@@ -45,30 +42,91 @@ public class TinkerApplicationLike extends DefaultApplicationLike{
         getApplication().registerActivityLifecycleCallbacks(callback);
     }
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        configTinker();
+    }
+
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     @Override
     public void onBaseContextAttached(Context base) {
         super.onBaseContextAttached(base);
-        mApplication = getApplication();
         mContext = getApplication();
-        initTinker(base);
+        MultiDex.install(base);
+        // 安装tinker
+        Beta.installTinker(this);
+
+
         //以后的初始化操作
         BlockDetectByPrinter.start();
     }
 
-    private void initTinker(Context base) {
-// tinker需要你开启MultiDex
-        MultiDex.install(base);
-
-        TinkerManager.setTinkerApplicationLike(this);
-        // 设置全局异常捕获
-        TinkerManager.initFastCrashProtect();
-        //开启升级重试功能（在安装Tinker之前设置）
-        TinkerManager.setUpgradeRetryEnable(true);
-        //设置Tinker日志输出类
-        TinkerInstaller.setLogIml(new MyLogImp());
-        //安装Tinker(在加载完multiDex之后，否则你需要将com.tencent.tinker.**手动放到main dex中)
-        TinkerManager.installTinker(this);
-        mTinker = Tinker.with(getApplication());
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+        Beta.unInit();
     }
+
+    private void configTinker() {
+        // 设置是否开启热更新能力，默认为true
+        Beta.enableHotfix = true;
+        // 设置是否自动下载补丁，默认为true
+        Beta.canAutoDownloadPatch = true;
+        // 设置是否自动合成补丁，默认为true
+        Beta.canAutoPatch = true;
+        // 设置是否提示用户重启，默认为false
+        Beta.canNotifyUserRestart = true;
+        // 补丁回调接口
+        Beta.betaPatchListener = new BetaPatchListener() {
+            @Override
+            public void onPatchReceived(String patchFile) {
+                Toast.makeText(mContext, "补丁下载地址" + patchFile, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onDownloadReceived(long savedLength, long totalLength) {
+                Toast.makeText(mContext,
+                        String.format(Locale.getDefault(), "%s %d%%",
+                                Beta.strNotificationDownloading,
+                                (int) (totalLength == 0 ? 0 : savedLength * 100 / totalLength)),
+                        Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onDownloadSuccess(String msg) {
+                Toast.makeText(mContext, "补丁下载成功", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onDownloadFailure(String msg) {
+                Toast.makeText(mContext, "补丁下载失败", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onApplySuccess(String msg) {
+                Toast.makeText(mContext, "补丁应用成功", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onApplyFailure(String msg) {
+                Toast.makeText(mContext, "补丁应用失败", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onPatchRollback() {
+
+            }
+        };
+
+        // 设置开发设备，默认为false，上传补丁如果下发范围指定为“开发设备”，需要调用此接口来标识开发设备
+        Bugly.setIsDevelopmentDevice(mContext, true);
+        // 多渠道需求塞入
+        // String channel = WalleChannelReader.getChannel(getApplication());
+        // Bugly.setAppChannel(getApplication(), channel);
+        // 这里实现SDK初始化，appId替换成你的在Bugly平台申请的appId
+        //还可以设置是否输出Log，可以观察到Bugly在App启动时做了哪些联网操作。
+        Bugly.init(mContext, "94786d2d6c", true);
+    }
+
 }

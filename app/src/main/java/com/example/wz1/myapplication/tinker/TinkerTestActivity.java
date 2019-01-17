@@ -36,6 +36,10 @@ public class TinkerTestActivity extends BaseActivity {
 
     private static String[] PERMISSIONS_STORAGE = {
             "android.permission.READ_EXTERNAL_STORAGE",
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.ACCESS_NETWORK_STATE",
+            "android.permission.ACCESS_WIFI_STATE",
+            "android.permission.READ_LOGS",
             "android.permission.WRITE_EXTERNAL_STORAGE"
     };
     @Override
@@ -71,7 +75,7 @@ public class TinkerTestActivity extends BaseActivity {
     }
 
     public void say(View view) {
-        Toast.makeText(getApplicationContext(), "Hello 就是干 release", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Hello 就是干 bugly tinkerId:[base-1.0.0.12]", Toast.LENGTH_SHORT).show();
 //        Toast.makeText(getApplicationContext(), "Hello World", Toast.LENGTH_SHORT).show();
 //        Toast.makeText(getApplicationContext(), "Hello World 123", Toast.LENGTH_SHORT).show();
     }
