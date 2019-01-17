@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
-apply from: 'tinker_support.gradle'
+//apply from: 'tinker_support.gradle'
 
 android {
     compileSdkVersion rootProject.ext.androidSet.compileSdkVersion

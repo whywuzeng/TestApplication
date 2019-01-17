@@ -18,7 +18,7 @@ def myTinkerId = "patch-" + rootProject.ext.androidSet.versionName + ".0."+count
 tinkerSupport {
 
     // 开启tinker-support插件，默认值true
-    enable = true
+    enable = rootProject.ext.androidSet.TinkerEnable
 
     // 是否启用加固模式，默认为false.(tinker-spport 1.0.7起支持）
     // isProtectedApp = true

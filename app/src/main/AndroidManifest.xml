@@ -73,11 +73,6 @@
         </activity>
         <!--测试Tinker使用-->
         <activity android:name=".tinker.TinkerTestActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
 
         <!-- Bugly Activity配置-->
@@ -85,6 +80,18 @@
             android:name="com.tencent.bugly.beta.ui.BetaActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|locale"
             android:theme="@android:style/Theme.Translucent"/>
+
+        <!--测试FragmentPageAdapter 刷新问题-->
+        <activity android:name=".fragmentTest.PagerAdapterTestActivity">
+        </activity>
+        <!--PagerView  以view 为Item 测试-->
+        <activity android:name=".fragmentTest.viewpager.ViewTestActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
 
 
         <service android:name="com.example.wz1.myapplication.BookBinderTest.BookService11"/>
