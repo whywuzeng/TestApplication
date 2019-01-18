@@ -12,9 +12,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.wz1.myapplication.R;
+import com.example.wz1.myapplication.fragmentTest.BaseFragment;
 import com.example.wz1.myapplication.systembar.BaseActivity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -43,10 +45,24 @@ public class ViewTestActivity extends BaseActivity {
     private ArrayList<String> mDataList;
     private PagerAdapter pagerAdapter;
 
+    private List<BaseFragment> fragments;
+    private BaseFragmentPagerAdapter adapter;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initData();
+//        initData();
+        initData2();
+    }
+
+    private void initData2() {
+        fragments=new ArrayList<>();
+        for(int i=0;i<4;i++)
+        {
+            fragments.add(TestFragmentAdapter.newInstance("第"+i+"个"));
+        }
+         adapter = new BaseFragmentPagerAdapter(getSupportFragmentManager(), fragments);
+        viewpager.setAdapter(adapter);
     }
 
     private void initData() {
@@ -88,7 +104,6 @@ public class ViewTestActivity extends BaseActivity {
              public int getItemPosition(@NonNull Object object) {
                  if (object instanceof View)
                  {
-                    ((View) object).getTag()
                  }
                  return super.getItemPosition(object);
              }
@@ -104,16 +119,12 @@ public class ViewTestActivity extends BaseActivity {
 
     @OnClick(R.id.btn_add)
     public void onBtnAddClicked() {
-        mDataList.add("添加的数据");
-        pagerAdapter.notifyDataSetChanged();
+        adapter.addFragment(TestFragmentAdapter.newInstance("新添加的Fragment"));
     }
 
     @OnClick(R.id.btn_del)
     public void onBtnDelClicked() {
-        if (check()){
-            mDataList.remove(0);
-        }
-        pagerAdapter.notifyDataSetChanged();
+        adapter.removeFragment(2);
     }
 
     private boolean check() {
@@ -126,13 +137,12 @@ public class ViewTestActivity extends BaseActivity {
 
     @OnClick(R.id.btn_replace)
     public void onBtnReplaceClicked() {
-
+        adapter.replaceFragment(2,TestFragmentAdapter.newInstance("替换第2个Fragment"));
     }
 
     @OnClick(R.id.btn_clear)
     public void onBtnClearClicked() {
-        mDataList.clear();
-        pagerAdapter.notifyDataSetChanged();
+        adapter.clearFragment();
     }
 
 
