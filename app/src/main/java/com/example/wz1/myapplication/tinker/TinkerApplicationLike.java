@@ -4,11 +4,15 @@ import android.annotation.TargetApi;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.support.multidex.MultiDex;
 import android.widget.Toast;
 
 import com.example.wz1.myapplication.BlockDetectByPrinter.BlockDetectByPrinter;
+import com.example.wz1.myapplication.greenDao.DaoMaster;
+import com.example.wz1.myapplication.greenDao.DaoSession;
+import com.example.wz1.myapplication.greenDao.UserDao;
 import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
 import com.tencent.bugly.beta.interfaces.BetaPatchListener;
@@ -30,6 +34,11 @@ public class TinkerApplicationLike extends DefaultApplicationLike{
 
     private Application mContext;
     private Tinker mTinker;
+    private DaoMaster.DevOpenHelper helper;
+    private SQLiteDatabase db;
+    private DaoMaster daoMaster;
+    private static DaoSession daoSession;
+    private UserDao userDao;
 
     // 固定写法
     public TinkerApplicationLike(Application application, int tinkerFlags, boolean tinkerLoadVerifyFlag, long applicationStartElapsedTime, long applicationStartMillisTime, Intent tinkerResultIntent) {
@@ -46,6 +55,18 @@ public class TinkerApplicationLike extends DefaultApplicationLike{
     public void onCreate() {
         super.onCreate();
         configTinker();
+        initDB();
+    }
+
+    private void initDB() {
+        helper = new DaoMaster.DevOpenHelper(mContext, "wuzengDb", null);
+        db = helper.getWritableDatabase();
+        daoMaster = new DaoMaster(db);
+        daoSession = daoMaster.newSession();
+    }
+
+    public static DaoSession getDaoSession() {
+        return daoSession;
     }
 
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)

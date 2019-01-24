@@ -92,6 +92,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".greenDao.GreenDaoTestActivity"/>
 
 
         <service android:name="com.example.wz1.myapplication.BookBinderTest.BookService11"/>
